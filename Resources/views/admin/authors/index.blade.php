@@ -30,6 +30,7 @@
                             <thead>
                             <tr>
                                 <th>{{ trans('core::core.table.created at') }}</th>
+                                <th>Name</th>
                                 <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                             </tr>
                             </thead>
@@ -60,6 +61,7 @@
                             <tfoot>
                             <tr>
                                 <th>{{ trans('core::core.table.created at') }}</th>
+                                <th>Name</th>
                                 <th>{{ trans('core::core.table.actions') }}</th>
                             </tr>
                             </tfoot>
