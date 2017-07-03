@@ -19,17 +19,17 @@
     {!! Form::open(['route' => ['admin.medialinkexample.author.store'], 'method' => 'post']) !!}
     <div class="row">
         <div class="col-md-12">
-            <div class="nav-tabs-custom">
-                <div class="bo box-primary">
-                    <div class="box-body">
-                        {!! Form::normalInput('name', 'Name', $errors) !!}
-                    </div>
-                    <div class="box-footer">
-                        <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.create') }}</button>
-                        <a class="btn btn-danger pull-right btn-flat" href="{{ route('admin.medialinkexample.author.index')}}"><i class="fa fa-times"></i> {{ trans('core::core.button.cancel') }}</a>
-                    </div>
+            <div class="box box-primary">
+                <div class="box-body">
+                    {!! Form::normalInput('name', 'Name', $errors) !!}
+
+                    @mediaSingle('profile_image')
                 </div>
-            </div> {{-- end nav-tabs-custom --}}
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.create') }}</button>
+                    <a class="btn btn-danger pull-right btn-flat" href="{{ route('admin.medialinkexample.author.index')}}"><i class="fa fa-times"></i> {{ trans('core::core.button.cancel') }}</a>
+                </div>
+            </div>
         </div>
     </div>
     {!! Form::close() !!}
