@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Medialinkexample\Providers;
+namespace Modules\MediaLinkExample\Providers;
 
 use Modules\Core\Providers\RoutingServiceProvider as CoreRoutingServiceProvider;
 
@@ -10,7 +10,7 @@ class RouteServiceProvider extends CoreRoutingServiceProvider
      * The root namespace to assume when generating URLs to actions.
      * @var string
      */
-    protected $namespace = 'Modules\Medialinkexample\Http\Controllers';
+    protected $namespace = 'Modules\MediaLinkExample\Http\Controllers';
 
     /**
      * @return string

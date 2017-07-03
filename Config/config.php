@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'name' => 'Medialinkexample'
+    'name' => 'MediaLinkExample'
 ];

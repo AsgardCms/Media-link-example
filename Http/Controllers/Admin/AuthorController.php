@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Medialinkexample\Http\Controllers\Admin;
+namespace Modules\MediaLinkExample\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Modules\Medialinkexample\Entities\Author;
-use Modules\Medialinkexample\Repositories\AuthorRepository;
+use Modules\MediaLinkExample\Entities\Author;
+use Modules\MediaLinkExample\Repositories\AuthorRepository;
 use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 
 class AuthorController extends AdminBaseController
@@ -54,7 +54,7 @@ class AuthorController extends AdminBaseController
     {
         $this->author->create($request->all());
 
-        return redirect()->route('admin.medialinkexample.author.index')
+        return redirect()->route('admin.MediaLinkExample.author.index')
             ->withSuccess(trans('core::core.messages.resource created', ['name' => trans('medialinkexample::authors.title.authors')]));
     }
 
@@ -80,7 +80,7 @@ class AuthorController extends AdminBaseController
     {
         $this->author->update($author, $request->all());
 
-        return redirect()->route('admin.medialinkexample.author.index')
+        return redirect()->route('admin.MediaLinkExample.author.index')
             ->withSuccess(trans('core::core.messages.resource updated', ['name' => trans('medialinkexample::authors.title.authors')]));
     }
 
@@ -94,7 +94,7 @@ class AuthorController extends AdminBaseController
     {
         $this->author->destroy($author);
 
-        return redirect()->route('admin.medialinkexample.author.index')
+        return redirect()->route('admin.MediaLinkExample.author.index')
             ->withSuccess(trans('core::core.messages.resource deleted', ['name' => trans('medialinkexample::authors.title.authors')]));
     }
 }

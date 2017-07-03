@@ -15,7 +15,7 @@
         <div class="col-xs-12">
             <div class="row">
                 <div class="btn-group pull-right" style="margin: 0 15px 15px 0;">
-                    <a href="{{ route('admin.medialinkexample.author.create') }}" class="btn btn-primary btn-flat" style="padding: 4px 10px;">
+                    <a href="{{ route('admin.MediaLinkExample.author.create') }}" class="btn btn-primary btn-flat" style="padding: 4px 10px;">
                         <i class="fa fa-pencil"></i> {{ trans('medialinkexample::authors.button.create author') }}
                     </a>
                 </div>
@@ -39,19 +39,19 @@
                             <?php foreach ($authors as $author): ?>
                             <tr>
                                 <td>
-                                    <a href="{{ route('admin.medialinkexample.author.edit', [$author->id]) }}">
+                                    <a href="{{ route('admin.MediaLinkExample.author.edit', [$author->id]) }}">
                                         {{ $author->created_at }}
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="{{ route('admin.medialinkexample.author.edit', [$author->id]) }}">
+                                    <a href="{{ route('admin.MediaLinkExample.author.edit', [$author->id]) }}">
                                         {{ $author->name }}
                                     </a>
                                 </td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="{{ route('admin.medialinkexample.author.edit', [$author->id]) }}" class="btn btn-default btn-flat"><i class="fa fa-pencil"></i></a>
-                                        <button class="btn btn-danger btn-flat" data-toggle="modal" data-target="#modal-delete-confirmation" data-action-target="{{ route('admin.medialinkexample.author.destroy', [$author->id]) }}"><i class="fa fa-trash"></i></button>
+                                        <a href="{{ route('admin.MediaLinkExample.author.edit', [$author->id]) }}" class="btn btn-default btn-flat"><i class="fa fa-pencil"></i></a>
+                                        <button class="btn btn-danger btn-flat" data-toggle="modal" data-target="#modal-delete-confirmation" data-action-target="{{ route('admin.MediaLinkExample.author.destroy', [$author->id]) }}"><i class="fa fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>
@@ -91,7 +91,7 @@
         $( document ).ready(function() {
             $(document).keypressAction({
                 actions: [
-                    { key: 'c', route: "<?= route('admin.medialinkexample.author.create') ?>" }
+                    { key: 'c', route: "<?= route('admin.MediaLinkExample.author.create') ?>" }
                 ]
             });
         });

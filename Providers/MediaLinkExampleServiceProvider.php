@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Medialinkexample\Providers;
+namespace Modules\MediaLinkExample\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Modules\Core\Traits\CanPublishConfiguration;
 
-class MedialinkexampleServiceProvider extends ServiceProvider
+class MediaLinkExampleServiceProvider extends ServiceProvider
 {
     use CanPublishConfiguration;
     /**
@@ -27,7 +27,7 @@ class MedialinkexampleServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->publishConfig('medialinkexample', 'permissions');
+        $this->publishConfig('MediaLinkExample', 'permissions');
     }
 
     /**
@@ -43,15 +43,15 @@ class MedialinkexampleServiceProvider extends ServiceProvider
     private function registerBindings()
     {
         $this->app->bind(
-            'Modules\Medialinkexample\Repositories\AuthorRepository',
+            'Modules\MediaLinkExample\Repositories\AuthorRepository',
             function () {
-                $repository = new \Modules\Medialinkexample\Repositories\Eloquent\EloquentAuthorRepository(new \Modules\Medialinkexample\Entities\Author());
+                $repository = new \Modules\MediaLinkExample\Repositories\Eloquent\EloquentAuthorRepository(new \Modules\MediaLinkExample\Entities\Author());
 
                 if (! config('app.cache')) {
                     return $repository;
                 }
 
-                return new \Modules\Medialinkexample\Repositories\Cache\CacheAuthorDecorator($repository);
+                return new \Modules\MediaLinkExample\Repositories\Cache\CacheAuthorDecorator($repository);
             }
         );
 // add bindings

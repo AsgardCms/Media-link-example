@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\Medialinkexample\Repositories\Cache;
+namespace Modules\MediaLinkExample\Repositories\Cache;
 
-use Modules\Medialinkexample\Repositories\AuthorRepository;
+use Modules\MediaLinkExample\Repositories\AuthorRepository;
 use Modules\Core\Repositories\Cache\BaseCacheDecorator;
 
 class CacheAuthorDecorator extends BaseCacheDecorator implements AuthorRepository
@@ -10,7 +10,7 @@ class CacheAuthorDecorator extends BaseCacheDecorator implements AuthorRepositor
     public function __construct(AuthorRepository $author)
     {
         parent::__construct();
-        $this->entityName = 'medialinkexample.authors';
+        $this->entityName = 'MediaLinkExample.authors';
         $this->repository = $author;
     }
 }
