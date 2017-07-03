@@ -6,7 +6,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard.index') }}"><i class="fa fa-dashboard"></i> {{ trans('core::core.breadcrumb.home') }}</a></li>
-        <li><a href="{{ route('admin.medialinkexample.author.index') }}">{{ trans('medialinkexample::authors.title.authors') }}</a></li>
+        <li><a href="{{ route('admin.MediaLinkExample.author.index') }}">{{ trans('medialinkexample::authors.title.authors') }}</a></li>
         <li class="active">{{ trans('medialinkexample::authors.title.create author') }}</li>
     </ol>
 @stop
@@ -16,7 +16,7 @@
 @stop
 
 @section('content')
-    {!! Form::open(['route' => ['admin.medialinkexample.author.store'], 'method' => 'post']) !!}
+    {!! Form::open(['route' => ['admin.MediaLinkExample.author.store'], 'method' => 'post']) !!}
     <div class="row">
         <div class="col-md-12">
             <div class="box box-primary">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.create') }}</button>
-                    <a class="btn btn-danger pull-right btn-flat" href="{{ route('admin.medialinkexample.author.index')}}"><i class="fa fa-times"></i> {{ trans('core::core.button.cancel') }}</a>
+                    <a class="btn btn-danger pull-right btn-flat" href="{{ route('admin.MediaLinkExample.author.index')}}"><i class="fa fa-times"></i> {{ trans('core::core.button.cancel') }}</a>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
         $( document ).ready(function() {
             $(document).keypressAction({
                 actions: [
-                    { key: 'b', route: "<?= route('admin.medialinkexample.author.index') ?>" }
+                    { key: 'b', route: "<?= route('admin.MediaLinkExample.author.index') ?>" }
                 ]
             });
         });

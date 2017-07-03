@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Medialinkexample\Repositories;
+namespace Modules\MediaLinkExample\Repositories;
 
 use Modules\Core\Repositories\BaseRepository;
 

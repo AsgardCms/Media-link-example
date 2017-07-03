@@ -1,9 +1,9 @@
 <?php
 
-namespace Modules\Medialinkexample\Events;
+namespace Modules\MediaLinkExample\Events;
 
 use Modules\Media\Contracts\StoringMedia;
-use Modules\Medialinkexample\Entities\Author;
+use Modules\MediaLinkExample\Entities\Author;
 
 class AuthorWasCreated implements StoringMedia
 {

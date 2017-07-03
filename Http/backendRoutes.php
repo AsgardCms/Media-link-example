@@ -5,37 +5,37 @@ use Illuminate\Routing\Router;
 
 $router->group(['prefix' =>'/medialinkexample'], function (Router $router) {
     $router->bind('author', function ($id) {
-        return app('Modules\Medialinkexample\Repositories\AuthorRepository')->find($id);
+        return app('Modules\MediaLinkExample\Repositories\AuthorRepository')->find($id);
     });
     $router->get('authors', [
-        'as' => 'admin.medialinkexample.author.index',
+        'as' => 'admin.MediaLinkExample.author.index',
         'uses' => 'AuthorController@index',
-        'middleware' => 'can:medialinkexample.authors.index'
+        'middleware' => 'can:MediaLinkExample.authors.index'
     ]);
     $router->get('authors/create', [
-        'as' => 'admin.medialinkexample.author.create',
+        'as' => 'admin.MediaLinkExample.author.create',
         'uses' => 'AuthorController@create',
-        'middleware' => 'can:medialinkexample.authors.create'
+        'middleware' => 'can:MediaLinkExample.authors.create'
     ]);
     $router->post('authors', [
-        'as' => 'admin.medialinkexample.author.store',
+        'as' => 'admin.MediaLinkExample.author.store',
         'uses' => 'AuthorController@store',
-        'middleware' => 'can:medialinkexample.authors.create'
+        'middleware' => 'can:MediaLinkExample.authors.create'
     ]);
     $router->get('authors/{author}/edit', [
-        'as' => 'admin.medialinkexample.author.edit',
+        'as' => 'admin.MediaLinkExample.author.edit',
         'uses' => 'AuthorController@edit',
-        'middleware' => 'can:medialinkexample.authors.edit'
+        'middleware' => 'can:MediaLinkExample.authors.edit'
     ]);
     $router->put('authors/{author}', [
-        'as' => 'admin.medialinkexample.author.update',
+        'as' => 'admin.MediaLinkExample.author.update',
         'uses' => 'AuthorController@update',
-        'middleware' => 'can:medialinkexample.authors.edit'
+        'middleware' => 'can:MediaLinkExample.authors.edit'
     ]);
     $router->delete('authors/{author}', [
-        'as' => 'admin.medialinkexample.author.destroy',
+        'as' => 'admin.MediaLinkExample.author.destroy',
         'uses' => 'AuthorController@destroy',
-        'middleware' => 'can:medialinkexample.authors.destroy'
+        'middleware' => 'can:MediaLinkExample.authors.destroy'
     ]);
 // append
 

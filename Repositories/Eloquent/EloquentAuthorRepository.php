@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Medialinkexample\Repositories\Eloquent;
+namespace Modules\MediaLinkExample\Repositories\Eloquent;
 
-use Modules\Medialinkexample\Events\AuthorWasCreated;
-use Modules\Medialinkexample\Events\AuthorWasDeleted;
-use Modules\Medialinkexample\Events\AuthorWasUpdated;
-use Modules\Medialinkexample\Repositories\AuthorRepository;
+use Modules\MediaLinkExample\Events\AuthorWasCreated;
+use Modules\MediaLinkExample\Events\AuthorWasDeleted;
+use Modules\MediaLinkExample\Events\AuthorWasUpdated;
+use Modules\MediaLinkExample\Repositories\AuthorRepository;
 use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
 
 class EloquentAuthorRepository extends EloquentBaseRepository implements AuthorRepository

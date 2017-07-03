@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Medialinkexample\Sidebar;
+namespace Modules\MediaLinkExample\Sidebar;
 
 use Maatwebsite\Sidebar\Group;
 use Maatwebsite\Sidebar\Item;
@@ -41,10 +41,10 @@ class SidebarExtender implements \Maatwebsite\Sidebar\SidebarExtender
                 $item->item(trans('medialinkexample::authors.title.authors'), function (Item $item) {
                     $item->icon('fa fa-copy');
                     $item->weight(0);
-                    $item->append('admin.medialinkexample.author.create');
-                    $item->route('admin.medialinkexample.author.index');
+                    $item->append('admin.MediaLinkExample.author.create');
+                    $item->route('admin.MediaLinkExample.author.index');
                     $item->authorize(
-                        $this->auth->hasAccess('medialinkexample.authors.index')
+                        $this->auth->hasAccess('MediaLinkExample.authors.index')
                     );
                 });
 // append
