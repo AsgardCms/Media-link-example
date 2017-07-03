@@ -9,7 +9,7 @@ A sample module to be used as an example on how to link media with your own enti
 Using AsgardCMS's module download command:
 
 ``` bash
-php artisan asgard:download:module asgardcms/Media-Link-Example --migrations
+php artisan asgard:download:module asgardcms/Media-link-example --migrations
 ```
 
 This will download the module and run its migrations.
