@@ -18,6 +18,8 @@ This will download the module and run its migrations.
 
 Once you have the required permission, you can create new authors, with a name and a profile picture.
 
+Documentation on how to link media: [https://asgardcms.com/docs/v2/media-module/linking-media-to-entities](https://asgardcms.com/docs/v2/media-module/linking-media-to-entities)
+
 ## Delete module
 
 Once you're done experimenting, you can delete the module using the following command:
