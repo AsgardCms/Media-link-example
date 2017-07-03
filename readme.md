@@ -17,3 +17,11 @@ This will download the module and run its migrations.
 **Note: Don't forget to give yourself the required permissions before you can view the backend entries.**
 
 Once you have the required permission, you can create new authors, with a name and a profile picture.
+
+## Delete module
+
+Once you're done experimenting, you can delete the module using the following command:
+
+``` bash
+php artisan asgard:delete:module MediaLinkExample --migrations
+```
