@@ -6,8 +6,8 @@
     "active": 1,
     "order": 1,
     "providers": [
-        "Modules\\Medialinkexample\\Providers\\MedialinkexampleServiceProvider",
-        "Modules\\Medialinkexample\\Providers\\RouteServiceProvider"
+        "Modules\\MediaLinkExample\\Providers\\MediaLinkExampleServiceProvider",
+        "Modules\\MediaLinkExample\\Providers\\RouteServiceProvider"
     ],
     "aliases": {},
     "files": [
