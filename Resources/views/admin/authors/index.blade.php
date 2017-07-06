@@ -29,7 +29,8 @@
                         <table class="data-table table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>{{ trans('core::core.table.created at') }}</th>
+                                <th width="150">{{ trans('core::core.table.created at') }}</th>
+                                <th width="150"></th>
                                 <th>Name</th>
                                 <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                             </tr>
@@ -42,6 +43,9 @@
                                     <a href="{{ route('admin.MediaLinkExample.author.edit', [$author->id]) }}">
                                         {{ $author->created_at }}
                                     </a>
+                                </td>
+                                <td>
+                                    <img src="{{ Imagy::getThumbnail($author->profile_picture->path, 'miniProfileThumb') }}" alt="" />
                                 </td>
                                 <td>
                                     <a href="{{ route('admin.MediaLinkExample.author.edit', [$author->id]) }}">
@@ -61,6 +65,7 @@
                             <tfoot>
                             <tr>
                                 <th>{{ trans('core::core.table.created at') }}</th>
+                                <th></th>
                                 <th>Name</th>
                                 <th>{{ trans('core::core.table.actions') }}</th>
                             </tr>
