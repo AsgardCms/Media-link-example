@@ -4,6 +4,7 @@ namespace Modules\MediaLinkExample\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Modules\Core\Traits\CanPublishConfiguration;
+use Modules\Media\Image\ThumbnailManager;
 
 class MediaLinkExampleServiceProvider extends ServiceProvider
 {
@@ -28,6 +29,17 @@ class MediaLinkExampleServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishConfig('MediaLinkExample', 'permissions');
+
+        $this->app[ThumbnailManager::class]->registerThumbnail('miniProfileThumb', [
+            'resize' => [
+                'width' => 100,
+                'height' => null,
+                'callback' => function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                },
+            ],
+        ]);
     }
 
     /**
